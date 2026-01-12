@@ -1,0 +1,366 @@
+
+@font-face {
+  font-family: 'SseulroneNetHandwrittenFont';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2402_1@1.0/SSRONETHandwritten.woff2') format('woff2');
+  font-weight: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: 'SseulroneNetHandwrittenFont';
+}
+/* 전체 레이아웃: 좌(앨범) / 우(편집) */
+.bookWrap {
+  height: 100vh;
+  display: flex;
+  background: #fff;
+}
+
+/* 좌측: 포토북 영역 */
+.bookLeft {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+
+}
+
+/* 우측: 편집 패널 */
+.bookRight {
+  width: 380px;
+  border-left: 1px solid #ddd;
+  padding: 20px;
+  background: #fafafa;
+ 
+
+}
+
+/* 상단 */
+.leftTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.bookTitle {
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.newBtn {
+  background: #111;
+  color: #fff;
+  border-radius: 12px;
+  padding: 8px 12px;
+  border: none;
+  cursor: pointer;
+}
+
+/* 월 섹션 */
+.monthSection { margin-bottom: 36px; }
+
+/* 헤더 */
+.monthHeader {
+  width: 60px;
+  height: 40px;
+  /* background: #d4d4d1; */
+  margin: 6px 0 20px;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  font-weight: 900;
+  color: #111;
+  border: 1px solid #000;
+  border-radius: 50px;
+  /* background: yellow; */
+}
+
+/* 2열 큰 카드 */
+.photoGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 30px;
+  row-gap: 45px;
+}
+
+/* 카드 버튼(클릭 가능) */
+.photoCardBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+}
+
+.actionsRow button {
+  border: 0;
+  padding: 5px;
+}
+
+/* 사진 */
+.photoArea {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background: #efefef;
+  overflow: hidden;
+}
+
+.photoImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.photoEmpty {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  color: #777;
+  font-weight: 800;
+}
+
+/* 오늘 표시 */
+.todayBar {
+  position: absolute;
+  left: 0;
+  bottom: -18px;
+  width: 140px;
+  height: 18px;
+  background: #00a3ff;
+}
+
+/* 제목 */
+.lineArea {
+  margin-top: 14px;
+  background: rgb(223, 223, 223);
+  padding: 14px 14px 16px;
+  /* text-align: center; */
+  position: relative;
+  text-align: center;
+
+}
+
+.lineTop { margin-bottom: 6px; }
+
+
+
+.lineLeft {
+  flex: 1px;
+  min-width: 0;
+}
+
+/* 날짜 */
+.dateBadge {
+  /* width: 50px; */
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #000000;
+  border-radius: 12px;
+  font-weight: 900;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  padding: 5px 10px;
+  text-align: right;
+}
+
+
+.dateText {
+  font-weight: 900;
+  font-size: 12px;
+  color: #111;
+}
+
+.lineText {
+  font-weight: 800;
+  font-size: 14px;
+  color: #111;
+  line-height: 1.35;
+}
+
+/* 빈 상태 */
+.emptyState {
+  margin-top: 20px;
+  font-weight: 900;
+  color: #111;
+}
+
+/* 우측 편집 패널 */
+.rightTop { margin-bottom: 14px; }
+
+.pickedDate {
+  font-weight: 900;
+  font-size: 16px;
+  color: #111;
+}
+
+.pickedSub {
+  margin-top: 4px;
+  color: #666;
+  font-weight: 800;
+  font-size: 12px;
+}
+
+.label {
+  display: block;
+  margin-top: 12px;
+  margin-bottom: 6px;
+  font-weight: 900;
+  font-size: 13px;
+  color: #111;
+}
+
+.input {
+  width: 100%;
+  height: 42px;
+  border-radius: 12px;
+  /* border: 1px solid rgba(0,0,0,0.15); */
+  padding: 0 12px;
+  outline: none;
+  background: #fff;
+}
+
+.textarea {
+  width: 100%;
+  border-radius: 12px;
+  /* border: 1px solid rgba(0,0,0,0.15); */
+  padding: 10px 12px;
+  /* outline: none; */
+  background: #fff;
+  resize: vertical;
+  margin-top: 0;
+
+}
+
+/* 사진 버튼 */
+.actionsRow {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.photoBtn {
+  flex: 1;
+  height: 40px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  font-weight: 900;
+  background: #111;
+  color: #fff;
+}
+
+.photoBtn.secondary {
+  background: #f1f1f1;
+  color: #111;
+  /* border: 1px solid rgba(0,0,0,0.12); */
+}
+
+.hiddenFile { display: none; }
+
+/* 미리보기 */
+.memoPreview  {
+  font-size: 12px;
+  color: #000;
+  opacity: 0.85;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 10px;
+}
+
+.previewItem {
+  position: relative;
+}
+
+.previewImg {
+  width: 72px;
+  height: 72px;
+  object-fit: cover;
+  border-radius: 14px;
+  background: #eee;
+}
+
+.xBtn {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: none;
+  background: #111;
+  color: #fff;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.previewEmpty {
+  color: #666;
+  font-weight: 800;
+  font-size: 12px;
+}
+
+/* 저장/삭제 */
+.btnRow {
+  display: flex;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.saveBtn {
+  flex: 1;
+  height: 44px;
+  border: none;
+  border-radius: 14px;
+  background: #f0f0f0;
+  color: #0000ff;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.delBtn {
+  width: 50px;
+  height: 44px;
+  border-radius: 14px;
+  background: #f0f0f0;
+  font-weight: 900;
+  cursor: pointer;
+  color: #ff0000;
+  border: none;
+}
+
+.hint {
+  margin-top: 14px;
+  color: #666;
+  font-weight: 800;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* 닫기 */
+.closeBtn {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 5px;
+}
+
+
+
+.photoCardBtn { position: relative; }
+
+.delMiniBtn{
+  position:absolute;
+  top:8px; right:8px;
+  z-index:10;
+  cursor:pointer;
+  user-select:none;
+}
+.delMiniBtn:hover{ background:rgba(0,0,0,.8); }
+

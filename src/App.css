@@ -1,0 +1,249 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'SseulroneNetHandwrittenFont';
+}
+
+/* 글자 넘침 */
+abbr {
+  text-decoration: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: inline-block;
+  width: 100%;
+}
+
+@font-face {
+  font-family: 'SseulroneNetHandwrittenFont';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2402_1@1.0/SSRONETHandwritten.woff2') format('woff2');
+  font-weight: normal;
+  font-display: swap;
+}
+
+.app {
+  width: 400px;
+  padding: 50px;
+  /* min-height: 100vh; */
+  box-sizing: border-box;
+  margin: 0 auto;
+  /* background-repeat: no-repeat; */
+  /* background-size: contain; */
+  background-image: url(../src/images/bg3.png);
+  background-size: contain;
+
+  
+}
+/* todo-list */
+.icon-btn {
+  font-size: 22px;
+  border: none;
+  background: transparent;
+
+}
+
+/* 제목 */
+.title {
+  text-align: center;
+  font-size: 22px;
+  margin-bottom: 10px;
+  /* font-weight: 0; */
+}
+
+
+.react-calendar {
+  width: 100% ;
+  border-radius: 15px;
+  border: none;
+  font-size: 16px;
+  /* background-image: url(../src/images/bg3.png); */
+  background: transparent; 
+  border: 0;
+
+}
+
+.react-calendar__tile {
+  padding: 45px 0 ;   
+  /* background-color: yellowgreen; */
+
+}
+
+/* 요일 크기 */
+.mood-circle {
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+
+ }
+
+.mood-emoji {
+  pointer-events: none;
+  font-size: 30px;
+}
+
+.mood-has-emoji {
+  display: flex;
+}
+.mood-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.mood-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: 12px;
+  border: none;
+  background: none;
+}
+
+.mood-btn-emoji {
+  font-size: 20px;
+}
+
+.mood-btn-active {
+  /* border-color: #585858; */
+  /* background: #ffffff; */
+}
+
+
+.diary-textarea {
+  width: 100%;
+  resize: none;
+  padding: 12px;
+  box-sizing: border-box;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+  margin-top: 4px;
+}
+
+/* .diary-textarea:focus {
+  border-color: #2563eb;
+  outline: none;
+  box-shadow: 0 0 0 1px rgba(37,99,235,0.25);
+} */
+
+
+.guide-text {
+  margin-top: 6px;
+  font-size: 12px;
+  color: #6b7280;
+}
+/*  */
+.react-calendar__navigation__label {
+  font-size: 20px;
+  padding: 0.6em;
+  font-weight: 800;
+}
+
+/* 버튼 크기 ,여백설정 */
+.react-calendar__navigation__arrow {
+  font-size: 1.5em;
+  padding: 0.2em;
+}
+
+
+/* 오늘 날짜 */
+.react-calendar__tile--now {
+  /* opacity: none; */
+  border-radius: 12px;
+
+}
+
+/* 눌린 날짜  */
+.react-calendar__tile--active {
+  border-radius: 12px;
+  /* opacity: 0; */
+}
+
+
+/* 일기 박스 */
+.diary-wrap {
+  max-width: 900px;
+  margin: 30px auto;
+  /* background: #fff; */
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+}
+
+.textarea {
+  width: 100%;
+  height: 500px;
+  /* margin: 16px 0; */
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  font-size: 18px;
+  padding: 12px;
+}
+
+.action_buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.action_buttons button {
+  flex: 1;
+}
+
+.save-btn {
+  color: blue;
+  font-weight: 600;
+  border-radius: 12px;
+  padding: 12px;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+  
+}
+.delete-btn {
+  color: red;
+  font-weight: 600;
+  border-radius: 12px;
+  padding: 12px;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+
+}
+
+
+
+
+
+
+/* 새 창(오늘 할 일) */
+.todo-win {
+  min-height: 100vh;
+  padding: 16px;
+  background: #fdfcf8;
+  font-family: Pretendard, sans-serif;
+}
+
+.todo-win-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.todo-win-title {
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.todo-win-date {
+  font-size: 13px;
+  opacity: 0.7;
+  margin-top: 4px;
+}
+
+
+
